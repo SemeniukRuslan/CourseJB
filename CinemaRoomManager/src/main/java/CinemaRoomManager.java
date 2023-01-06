@@ -1,4 +1,5 @@
-import java.util.Arrays;
+import java.lang.reflect.Method;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class CinemaRoomManager {
@@ -16,11 +17,6 @@ public class CinemaRoomManager {
     public static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-//        testInitCinemaT();
-//        testBuyTicket();
-//        testBuyTicketWhenSeatReserved();
-//        testBuyTicketWhenWrongInputSeat();
-//        testShowSeats();
         initialization();
         printChoose();
 

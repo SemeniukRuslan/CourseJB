@@ -4,8 +4,43 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5ab65dde-9703-4ace-a53e-f2e0383dc9b4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/CinemaRoomManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CinemaRoomManager.java" afterDir="false" />
+    <list default="true" id="5ab65dde-9703-4ace-a53e-f2e0383dc9b4" name="Default Changelist" comment="V1.3">
+      <change afterPath="$PROJECT_DIR$/../.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/ProjectsForJunior.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/dbnavigator.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/jpa-buddy.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BullsAndCows/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BullsAndCows/.idea/dbnavigator.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BullsAndCows/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BullsAndCows/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BullsAndCows/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BullsAndCows/BullsAndCows.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BullsAndCows/out/production/BullsAndCows/bullscows/BullsCows$BullsCowsController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BullsAndCows/out/production/BullsAndCows/bullscows/BullsCows$GameView.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BullsAndCows/out/production/BullsAndCows/bullscows/BullsCows$InputHolder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BullsAndCows/out/production/BullsAndCows/bullscows/BullsCows$Main.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BullsAndCows/out/production/BullsAndCows/bullscows/BullsCows$ResultHolder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BullsAndCows/out/production/BullsAndCows/bullscows/BullsCows.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BullsAndCows/out/test/BullsAndCows/bullscows/BullsCowsTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BullsAndCows/src/bullscows/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BullsAndCows/tests/BullsCowsTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BullsCows2/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BullsCows2/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BullsCows2/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BullsCows2/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BullsCows2/BullsCows.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BullsCows2/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BullsCows2/out/production/BullsCows/bullscows/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BullsCows2/out/production/BullsCows/bullscows/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BullsCows2/out/production/BullsCows/bullscows/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BullsCows2/out/production/BullsCows/bullscows/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BullsCows2/out/production/BullsCows/bullscows/BullsCows.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BullsCows2/out/production/BullsCows/bullscows/BullsCows.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BullsCows2/out/production/BullsCows/bullscows/Game.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BullsCows2/out/production/BullsCows/bullscows/Main.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,7 +55,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -37,7 +72,11 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "last_opened_file_path": "C:/Users/Ruslan Semeniuk/Desktop/Important/Java (Projects)/ProjectsForJunior/CinemaRoomManager"
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/Ruslan Semeniuk/Desktop/Important/Java (Projects)/ProjectsForJunior/CoffeMachine",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
   }
 }]]></component>
   <component name="RunManager" selected="Application.CinemaRoomManager">
@@ -103,6 +142,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1652108738257</updated>
+      <workItem from="1673043013057" duration="177000" />
     </task>
     <task id="LOCAL-00001" summary="V1.3">
       <created>1652380553385</created>
@@ -113,6 +153,9 @@
     </task>
     <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="V1.3" />
