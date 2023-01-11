@@ -1,33 +1,27 @@
-package bullscows;
 
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Test;
-
+import bullscows.*;
+import org.junit.BeforeClass;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 import java.util.Arrays;
 import java.util.Comparator;
 
+import static org.junit.Assert.assertTrue;
+
 public class BullsCowsTest {
-    public static BullsCows.GameView gameView;
-    public static BullsCows.BullsCowsController bullsCowsController;
-    public static BullsCows.InputHolder inputHolder;
-    public static BullsCows.ResultHolder resultHolder;
-
-    //чи потрібно зрівнювати в кінці кожного метода з assertom?
-
-    //testOfWordsInputForLengthPassword закинув повністю кусок метода з класу, за того, що вилітає Exception, а обробляю його тільки в тому методі,
-    //але у методі, який з класу, не можу вивести другий sout, бо в блоці try input не записався і пише null. Як з цим бути?
-
-    //testInputIncorrectLengthSymbolsToGuessThePassword мінімально змінена логіка в тесті, але для того, щоб перевірити лише лічильник і нову умову
-    //довжину при угадуванні, вона не повина перевищувати і не повинна бути менша довжини самого пароля
+    public static GameView gameView;
+    public static BullsCowsController bullsCowsController;
+    public static InputHolder inputHolder;
+    public static ResultHolder resultHolder;
 
     @BeforeClass
-    public void initialization() {
-        bullsCowsController = new BullsCows.BullsCowsController();
-        gameView = new BullsCows.GameView(bullsCowsController);
+    public static void initialization() {
+        gameView = new GameView(bullsCowsController);
     }
 
-    private static void extracted(int length, int charRangeMax) {
-        inputHolder = new BullsCows.InputHolder(length, charRangeMax);
+    private void extracted(int length, int charRangeMax) {
+        inputHolder = new InputHolder(length, charRangeMax);
+        bullsCowsController = new BullsCowsController();
         resultHolder = bullsCowsController.validSecretCode(inputHolder);
         System.out.println(resultHolder.getMessage());
     }
@@ -37,7 +31,7 @@ public class BullsCowsTest {
         extracted(6, 37);
         System.out.println("Test workWithCharRangeMaxSymbols - ok");
         extracted(6, -2);
-        System.out.println("Test workWithCharRangeMinSymbols - ok");
+        System.out.print("Test workWithCharRangeMinSymbols - ok");
     }
 
     @Test
@@ -59,14 +53,14 @@ public class BullsCowsTest {
         System.out.println("Test workWithIncorrectWordsLengthPassword - ok");
     }
 
-    @Test//?????
+    @Test
     public void testOfWordsInputForLengthPassword() {
         String length = "dsff6";
 
         while (true) {
             try {
-                BullsCows.ResultHolder resultHolder = bullsCowsController.validSecretCode(
-                        new BullsCows.InputHolder(Integer.parseInt(length), 6));
+                ResultHolder resultHolder = bullsCowsController.validSecretCode(
+                        new InputHolder(Integer.parseInt(length), 6));
                 System.out.println(resultHolder.getMessage());
                 if (resultHolder.getSuccess()) {
                     break;
@@ -83,16 +77,16 @@ public class BullsCowsTest {
     @Test
     public void workWithBullsAndCows() {
 
-        Comparator<BullsCows.ResultHolder> comparator = Comparator.comparing(BullsCows.ResultHolder::getMessage);
+        Comparator<ResultHolder> comparator = Comparator.comparing(ResultHolder::getMessage);
 
-        BullsCows.ResultHolder resultHolder11 = new BullsCows.ResultHolder(false, String.format("Grade: 0 bull(s) and 3 cow(s)%n"));
-        BullsCows.ResultHolder resultHolder12 = bullsCowsController.getGrade("234d", "342f");
+        ResultHolder resultHolder11 = new ResultHolder(false, String.format("Grade: 0 bull(s) and 3 cow(s)%n"));
+        ResultHolder resultHolder12 = bullsCowsController.getGrade("234d", "342f");
         if (comparator.compare(resultHolder11, resultHolder12) == 0) {
             System.out.println("Test workWithBullsAndCowsWithThreeLuckyCharacter - ok");
         }
 
-        BullsCows.ResultHolder resultHolder21 = new BullsCows.ResultHolder(true, String.format("Grade: 1 bulls\n"));
-        BullsCows.ResultHolder resultHolder22 = bullsCowsController.getGrade("0", "0");
+        ResultHolder resultHolder21 = new ResultHolder(true, String.format("Grade: 1 bulls\n"));
+        ResultHolder resultHolder22 = bullsCowsController.getGrade("0", "0");
         if (comparator.compare(resultHolder21, resultHolder22) == 0) {
             System.out.println("Test workWithBullsAndCowsWithOneLuckyCharacter - ok");
         }
@@ -100,7 +94,7 @@ public class BullsCowsTest {
 
     @Test//?????
     public void testInputIncorrectLengthSymbolsToGuessThePassword() {
-        inputHolder = new BullsCows.InputHolder(5, 6);
+        inputHolder = new InputHolder(5, 6);
         String secret = bullsCowsController.generateSecretCode(inputHolder);
         String input = "f62";
         int turn = 1;
@@ -112,7 +106,7 @@ public class BullsCowsTest {
                 System.out.println("Please enter the number of characters which is equal to " + inputHolder.getLength());
             }
 
-            BullsCows.ResultHolder resultHolder = bullsCowsController.getGrade(secret, "f62");
+            ResultHolder resultHolder = bullsCowsController.getGrade(secret, "f62");
             System.out.println(resultHolder.getMessage());
             if (resultHolder.getSuccess()) {
                 break;
@@ -124,17 +118,14 @@ public class BullsCowsTest {
 
     @Test
     public void testCorrectGenerateSecretCode() {
-        String secretCode1 = bullsCowsController.generateSecretCode(new BullsCows.InputHolder(36, 36));
+        String secretCode1 = bullsCowsController.generateSecretCode(new InputHolder(36, 36));
         char[] original = new char[]{'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e',
                 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
         char[] symbolsToControl = secretCode1.toCharArray();
         Arrays.sort(symbolsToControl);
-        if (Arrays.compare(original, symbolsToControl) == 0) {
+        if (Arrays.equals(original, symbolsToControl)) {
             System.out.println("Char[] arrays are the same");
         }
-
         System.out.println("Test testCorrectGenerateSecretCode - ok");
     }
-
-
 }
